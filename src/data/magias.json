@@ -1,79 +1,79 @@
 {
     "ciclo1": {
       "fisico": [
-        {
-          "requisito": "10",
-          "tipo": "físico",
-          "habilidade": "Ataque Elemental",
-          "acao": "Padrão",
-          "recurso": "SP",
-          "duracao": "Instantâneo",
-          "efeito1": "+2d8 dano",
-          "efeito2": "-----",
-          "alcance": "Arma",
-          "descricao": "Causa 2d8 de dano extra no ataque"
-        },
-        {
-          "requisito": "5",
-          "tipo": "físico",
-          "habilidade": "Trinca",
-          "acao": "Padrão",
-          "recurso": "SP",
-          "duracao": "Instantâneo",
-          "efeito1": "-1 CA (res. Reflexo)",
-          "efeito2": "Dura combate",
-          "alcance": "Melee",
-          "descricao": "Deixa o alvo em estado de vulnerabilidade. -1 CA. (res reflexo) (duração: combate)"
-        },
-        {
-          "requisito": "10",
-          "tipo": "físico",
-          "habilidade": "Segunda Pele",
-          "acao": "Bônus/Livre",
-          "recurso": "MP/SP",
-          "duracao": "4 ataques",
-          "efeito1": "+RD = mod",
-          "efeito2": "-----",
-          "alcance": "Self",
-          "descricao": "Se protege com seu elemento. (mod como RD)"
-        },
-        {
-          "requisito": "5",
-          "tipo": "físico",
-          "habilidade": "Imbuir Arma",
-          "acao": "Padrão",
-          "recurso": "MP/SP",
-          "duracao": "Combate",
-          "efeito1": "+1d6 dano",
-          "efeito2": "Dura combate",
-          "alcance": "Self",
-          "descricao": "Melhora sua arma com +1d6 de dano."
-        },
-        {
-          "requisito": "10",
-          "tipo": "físico",
-          "habilidade": "Toque Divino",
-          "acao": "Padrão",
-          "recurso": "MP/SP",
-          "duracao": "Instantâneo",
-          "efeito1": "2d8+mod cura",
-          "efeito2": "-----",
-          "alcance": "Melee/Self",
-          "descricao": "Cura 2d8+mod"
-        },
-        {
-          "requisito": "10",
-          "tipo": "físico",
-          "habilidade": "Taunt",
-          "acao": "Bônus/Livre",
-          "recurso": "SP",
-          "duracao": "1 turno",
-          "efeito1": "Provoca (Res. Von)",
-          "efeito2": "Dura 1 turno",
-          "alcance": "Move",
-          "descricao": "Provoca um inimigo. (res Vontade)"
-        }
-      ],
+      {
+        "requisito": "10",
+        "tipo": "físico",
+        "magia": "Ataque Elemental",
+        "acao": "Padrão",
+        "recurso": "SP",
+        "duracao": "Instantâneo",
+        "efeito1": "+2d8 dano",
+        "efeito2": "-----",
+        "alcance": "Arma",
+        "descricao": "Causa 2d8 de dano extra no ataque"
+      },
+      {
+        "requisito": "5",
+        "tipo": "físico",
+        "magia": "Trinca",
+        "acao": "Padrão",
+        "recurso": "SP",
+        "duracao": "Instantâneo",
+        "efeito1": "-1 CA (res. Reflexo)",
+        "efeito2": "Dura combate",
+        "alcance": "Melee",
+        "descricao": "Deixa o alvo em estado de vulnerabilidade. -1 CA. (res reflexo) (duração: combate)"
+      },
+      {
+        "requisito": "10",
+        "tipo": "físico",
+        "magia": "Segunda Pele",
+        "acao": "Bônus/Livre",
+        "recurso": "MP/SP",
+        "duracao": "4 ataques",
+        "efeito1": "+RD = mod",
+        "efeito2": "-----",
+        "alcance": "Self",
+        "descricao": "Se protege com seu elemento. (mod como RD)"
+      },
+      {
+        "requisito": "5",
+        "tipo": "físico",
+        "magia": "Imbuir Arma",
+        "acao": "Padrão",
+        "recurso": "MP/SP",
+        "duracao": "Combate",
+        "efeito1": "+1d6 dano",
+        "efeito2": "Dura combate",
+        "alcance": "Self",
+        "descricao": "Melhora sua arma com +1d6 de dano."
+      },
+      {
+        "requisito": "10",
+        "tipo": "físico",
+        "magia": "Toque Divino",
+        "acao": "Padrão",
+        "recurso": "MP/SP",
+        "duracao": "Instantâneo",
+        "efeito1": "2d8+mod cura",
+        "efeito2": "-----",
+        "alcance": "Melee/Self",
+        "descricao": "Cura 2d8+mod"
+      },
+      {
+        "requisito": "10",
+        "tipo": "físico",
+        "magia": "Taunt",
+        "acao": "Bônus/Livre",
+        "recurso": "SP",
+        "duracao": "1 turno",
+        "efeito1": "Provoca (Res. Von)",
+        "efeito2": "Dura 1 turno",
+        "alcance": "Move",
+        "descricao": "Provoca um inimigo. (res Vontade)"
+      }
+    ],
       
       "magico": 
         [
@@ -191,132 +191,45 @@
       
     },
     "ciclo2": {
-      "fisico":{
-        "habilidades": [
-          {
-            "requisito": "14",
-            "tipo": "Físico",
-            "habilidade": "Aura de Cura",
-            "acao": "Padrão",
-            "recurso": "MP",
-            "duracao": "Concentração",
-            "efeito1": "(1d4+mod)/round",
-            "efeito2": "Gera uma aura de cura por turno.",
-            "alcance": "Range: melee (5m)",
-            "descricao": "Gera uma aura de cura que restaura pontos de vida por turno para os aliados dentro do alcance."
-          },
-          {
-            "requisito": "11",
-            "tipo": "Físico",
-            "habilidade": "Golpe Destruidor",
-            "acao": "Padrão",
-            "recurso": "SP",
-            "duracao": "Instantâneo",
-            "efeito1": "3d12+mod",
-            "efeito2": "Ignora RD",
-            "alcance": "Arma",
-            "descricao": "Golpe devastador que ignora a resistência a danos e causa 3d12 + modificador de dano físico."
-          },
-          {
-            "requisito": "13",
-            "tipo": "Físico",
-            "habilidade": "Derrubada",
-            "acao": "Padrão",
-            "recurso": "SP",
-            "duracao": "Instantâneo",
-            "efeito1": "4d6+mod",
-            "efeito2": "Vulnerável e Prone",
-            "alcance": "Melee",
-            "descricao": "Derruba o inimigo, causando 4d6 + modificador de dano físico e deixando-o vulnerável e caído."
-          },
-          {
-            "requisito": "10",
-            "tipo": "Físico",
-            "habilidade": "Contenção",
-            "acao": "Padrão",
-            "recurso": "SP",
-            "duracao": "Instantâneo",
-            "efeito1": "3d4",
-            "efeito2": "mov/2, ação para curar",
-            "alcance": "Melee",
-            "descricao": "Reduz a movimentação do inimigo pela metade e causa dano."
-          },
-          {
-            "requisito": "15",
-            "tipo": "Físico",
-            "habilidade": "Hiperfoco",
-            "acao": "Bônus",
-            "recurso": "SP",
-            "duracao": "Instantâneo",
-            "efeito1": "+4 Acerto",
-            "efeito2": "Duração: 1 ataque",
-            "alcance": "Self",
-            "descricao": "Aumenta sua precisão no próximo ataque, garantindo +4 no acerto."
-          },
-          {
-            "requisito": "15",
-            "tipo": "Físico",
-            "habilidade": "Frenesi",
-            "acao": "Padrão",
-            "recurso": "SP",
-            "duracao": "Instantâneo",
-            "efeito1": "Acerto-CA = Dano",
-            "efeito2": "Duração: 2 ataques",
-            "alcance": "Self",
-            "descricao": "Seus próximos dois ataques têm dano extra baseado na diferença entre acerto e CA do inimigo."
-          },
-          {
-            "requisito": "12",
-            "tipo": "Físico",
-            "habilidade": "Teia",
-            "acao": "Bônus",
-            "recurso": "SP",
-            "duracao": "Instantâneo",
-            "efeito1": "Move/2",
-            "efeito2": "Burn: 2d6/turno",
-            "alcance": "10m",
-            "descricao": "Cria uma teia que prende o inimigo e reduz sua movimentação. Se queimada, causa 2d6 de dano por turno."
-          },
-          {
-            "requisito": "11",
-            "tipo": "Físico",
-            "habilidade": "Névoa",
-            "acao": "Bônus",
-            "recurso": "MP",
-            "duracao": "Concentração",
-            "efeito1": "Furtividade",
-            "efeito2": "DC (20+Cast), Res. Percep.",
-            "alcance": "15m",
-            "descricao": "Cria uma névoa que oferece camuflagem. Todos na área entram em furtividade, dificultando a percepção inimiga."
-          },
-          {
-            "requisito": "8",
-            "tipo": "Físico",
-            "habilidade": "Pele de Pedra",
-            "acao": "Padrão",
-            "recurso": "SP",
-            "duracao": "Concentração",
-            "efeito1": "Dano/2",
-            "efeito2": "Resist Núcleo",
-            "alcance": "Self",
-            "descricao": "Você se protege, reduzindo metade do dano recebido e ganhando resistência a ataques."
-          },
-          {
-            "requisito": "9",
-            "tipo": "Físico",
-            "habilidade": "Taunt",
-            "acao": "Bônus/Livre",
-            "recurso": "SP",
-            "duracao": "3 turnos",
-            "efeito1": "Provoca 1",
-            "efeito2": "Duração: 3 Turnos",
-            "alcance": "Move",
-            "descricao": "Provoca um inimigo, forçando-o a focar seus ataques em você por 3 turnos."
-          }
-        ]
+     "fisico": [
+      {
+        "requisito": "14",
+        "tipo": "Físico",
+        "magia": "Aura de Cura",
+        "acao": "Padrão",
+        "recurso": "MP",
+        "duracao": "Concentração",
+        "efeito1": "(1d4+mod)/round",
+        "efeito2": "Gera uma aura de cura por turno.",
+        "alcance": "Range: melee (5m)",
+        "descricao": "Gera uma aura de cura que restaura pontos de vida por turno para os aliados dentro do alcance."
+      },
+      {
+        "requisito": "11",
+        "tipo": "Físico",
+        "magia": "Golpe Destruidor",
+        "acao": "Padrão",
+        "recurso": "SP",
+        "duracao": "Instantâneo",
+        "efeito1": "3d12+mod",
+        "efeito2": "Ignora RD",
+        "alcance": "Arma",
+        "descricao": "Golpe devastador que ignora a resistência a danos e causa 3d12 + modificador de dano físico."
+      },
+      {
+        "requisito": "13",
+        "tipo": "Físico",
+        "magia": "Derrubada",
+        "acao": "Padrão",
+        "recurso": "SP",
+        "duracao": "Instantâneo",
+        "efeito1": "Causa Queda",
+        "efeito2": "Desarma",
+        "alcance": "Melee",
+        "descricao": "Derruba o alvo no chão, podendo desarmá-lo se falhar em resistência."
       }
-      ,
-      "magico":[
+    ],
+      "magico": [
         {
           "requisito": "12",
           "tipo": "mágico",
@@ -510,6 +423,5 @@
           "descricao": "Absorve 50% do dano que seu aliado escolhido receber."
         }
       ]
-      
     }
   }

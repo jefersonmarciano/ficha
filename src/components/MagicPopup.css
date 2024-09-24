@@ -12,15 +12,15 @@
   }
   
   .magic-popup {
-    background: #2c3e50; /* Cor de fundo mais escura */
-    padding: 30px; /* Aumenta o padding */
-    border-radius: 15px; /* Bordas mais arredondadas */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    background: #2c3e50; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
     width: 80%;
-    max-width: 600px; /* Aumenta a largura máxima */
+    max-width: 600px; 
     text-align: center;
-    color: #ecf0f1; /* Cor do texto mais clara */
-    position: relative; /* Necessário para o posicionamento do botão de fechar */
+    color: #ecf0f1; 
+    position: relative; 
   }
   
   .close-button {

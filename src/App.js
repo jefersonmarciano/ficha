@@ -81,11 +81,13 @@ function App() {
   }, [character]);
 
   const handleSelectMagic = (magia) => {
-    setSelectedMagic(magia);
     setSelectedSkills((prevSkills) => {
+      // Verifica se a magia já está selecionada
       if (prevSkills.some((skill) => skill.magia === magia.magia)) {
+        // Se já estiver selecionada, remove-a
         return prevSkills.filter((skill) => skill.magia !== magia.magia);
       } else {
+        // Se não estiver selecionada, adiciona-a
         return [...prevSkills, magia];
       }
     });
@@ -150,6 +152,7 @@ function App() {
             magias={magiasData.ciclo1.fisico}
             onClose={() => setShowMagicTablePopupCiclo1Fisico(false)}
             onSelect={handleSelectMagic}
+            selectedSkills={selectedSkills} // Passa as magias selecionadas
           />
         )}
         {showMagicTablePopupCiclo1Magico && (
@@ -157,13 +160,15 @@ function App() {
             magias={magiasData.ciclo1.magico}
             onClose={() => setShowMagicTablePopupCiclo1Magico(false)}
             onSelect={handleSelectMagic}
+            selectedSkills={selectedSkills} // Passa as magias selecionadas
           />
         )}
         {showMagicTablePopupCiclo2Fisico && (
           <MagicTablePopupCiclo2Fisico
-            magias={magiasData.ciclo2.fisico.habilidades}
+            magias={magiasData.ciclo2.fisico} // Corrigido para acessar diretamente o array
             onClose={() => setShowMagicTablePopupCiclo2Fisico(false)}
             onSelect={handleSelectMagic}
+            selectedSkills={selectedSkills} // Passa as magias selecionadas
           />
         )}
         {showMagicTablePopupCiclo2Magico && (
@@ -171,9 +176,13 @@ function App() {
             magias={magiasData.ciclo2.magico}
             onClose={() => setShowMagicTablePopupCiclo2Magico(false)}
             onSelect={handleSelectMagic}
+            selectedSkills={selectedSkills} // Passa as magias selecionadas
           />
         )}
-        
+        <div className="magic-details-section">
+          <h1>Detalhes da Magia</h1>
+          <MagicDetails magia={selectedMagic} />
+        </div>
         {showMagicPopup && (
           <MagicPopup
             skills={selectedSkills}

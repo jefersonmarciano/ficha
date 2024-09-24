@@ -10,7 +10,7 @@ const MagicPopup = ({ skills, onClose }) => {
         <ul>
           {skills.map((skill, index) => (
             <li key={index}>
-              <strong>{skill.magia}</strong>: {skill.descricao}
+              <strong>{skill.magia}</strong>: {skill.descricao}: Efeito 1: {skill.efeito1} Efeito 2: {skill.efeito2}
             </li>
           ))}
         </ul>

@@ -12,17 +12,15 @@
   }
   
   .magic-table-popup {
-    background: #2c3e50;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 1000px; /* Aumenta a largura máxima do popup */
-    max-height: 90%; /* Aumenta a altura máxima do popup */
-    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    background: #2c3e50; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
+    width: 80%;
+    max-width: 1200px; 
     text-align: center;
-    color: #ecf0f1;
-    position: relative;
+    color: #ecf0f1; 
+    position: relative; 
   }
   
   .close-button {
