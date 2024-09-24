@@ -68,7 +68,6 @@ function WeaponTable({ weapons, setCharacter }) {
           <tr>
             <td>
               <select
-                className="weapon-type-select"
                 value={weapons[0]?.weaponType || ''}
                 onChange={(e) => handleWeaponChange(0, 'weaponType', e.target.value)}
               >

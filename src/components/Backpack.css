@@ -3,14 +3,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #f9f9f9; /* Mudei a cor de fundo para um cinza claro */
     border: 1px solid #ccc;
     padding: 20px;
     z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Aumentei a sombra para um efeito mais bonito */
     width: 80%;
     max-width: 600px;
-    border-radius: 8px;
+    border-radius: 12px; /* Aumentei o raio da borda para um visual mais suave */
     overflow: hidden; /* Adicionado para garantir que o conteúdo não ultrapasse os limites */
 }
 
@@ -45,7 +45,7 @@
 }
 
 .backpack-popup th {
-    background-color: #f2f2f2;
+    background-color: #e0e0e0; /* Mudei a cor de fundo do cabeçalho da tabela */
 }
 
 .backpack-popup .money-section {
@@ -60,12 +60,12 @@
 .backpack-popup .close-button,
 .backpack-popup .add-item-button,
 .backpack-popup .remove-item-button {
-    padding: 5px 10px;
+    padding: 10px 15px; /* Aumentei o padding para um visual mais agradável */
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px; /* Aumentei o raio da borda para um visual mais suave */
 }
 
 .backpack-popup .close-button {
@@ -96,4 +96,30 @@
     width: 80%; /* Ajuste a largura conforme necessário */
     padding: 5px;
     box-sizing: border-box;
+}
+
+.backpack-popup .add-item-button {
+    display: block; /* Centraliza o botão */
+    margin: 20px auto; /* Adiciona margem superior e inferior e centraliza horizontalmente */
+    padding: 10px 20px; /* Aumenta o padding para um visual mais agradável */
+    background-color: #28a745; /* Muda a cor de fundo para verde */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    transition: background-color 0.3s; /* Adiciona transição suave para a mudança de cor */
+}
+
+.backpack-popup .add-item-button:hover {
+    background-color: #218838; /* Muda a cor de fundo ao passar o mouse */
+}
+
+.backpack-popup .money-section input[type="number"] {
+    width: 20%; /* Diminui a largura do input */
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Adiciona borda */
+    border-radius: 4px; /* Adiciona borda arredondada */
+    transition: border-color 0.3s; /* Adiciona transição suave para a mudança de cor da borda */
+}
+
+.backpack-popup .money-section input[type="number"]:focus {
+    border-color: #007bff; /* Muda a cor da borda ao focar no input */
 }

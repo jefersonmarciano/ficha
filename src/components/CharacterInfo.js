@@ -68,7 +68,7 @@ function CharacterInfo({ character, setCharacter }) {
         </div>
       </div>
       <div className="character-details">
-        <div className="input-group">
+        <div className="character-input-group">
           <label htmlFor="playerName">Jogador:</label>
           <input
             id="playerName"
@@ -77,15 +77,17 @@ function CharacterInfo({ character, setCharacter }) {
             value={character.playerName}
             onChange={handleInputChange}
             placeholder="Nome do Jogador"
+            className="player-name-input" // Alterado para a nova classe
           />
         </div>
-        <div className="input-group">
+        <div className="character-input-group">
           <label htmlFor="race">Raça:</label>
           <select
             id="race"
             name="race"
             value={character.race}
             onChange={handleInputChange}
+            className="character-select"
           >
             <option value="">Selecione a Raça</option>
             <option value="humano">Humano</option>
@@ -108,13 +110,14 @@ function CharacterInfo({ character, setCharacter }) {
             <option value="typhon">Typhon</option>
           </select>
         </div>
-        <div className="input-group">
+        <div className="character-input-group">
           <label htmlFor="element">Elemento:</label>
           <select
             id="element"
             name="element"
             value={character.element}
             onChange={handleInputChange}
+            className="character-select"
           >
             <option value="">Selecione o Elemento</option>
             <option value="fogo">Fogo</option>
@@ -128,13 +131,14 @@ function CharacterInfo({ character, setCharacter }) {
           </select>
         </div>
         {showOwlinElement && (
-          <div className="input-group">
+          <div className="character-input-group">
             <label htmlFor="owlinElement">Elemento Owlin:</label>
             <select
               id="owlinElement"
               name="owlinElement"
               value={character.owlinElement || ''}
               onChange={handleInputChange}
+              className="character-select"
             >
               <option value="">Selecione o Elemento Owlin</option>
               <option value="fogo">Fogo</option>

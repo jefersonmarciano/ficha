@@ -33,24 +33,25 @@
 
 .resource-inputs {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza os inputs */
     margin-bottom: 5px;
     width: 100%; /* Garante que os inputs ocupem toda a largura disponível */
 }
 
-.input-group {
+.resource-input-group {
     display: flex;
     flex-direction: column;
     width: 48%; /* Ajuste para dar espaço entre os inputs */
+    margin: 0 1%; /* Adiciona margem para centralizar */
 }
 
-.input-group label {
+.resource-input-group label {
     font-size: 0.8em;
     margin-bottom: 2px;
     color: #7f8c8d;
 }
 
-.input-group input {
+.resource-input {
     width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
     padding: 3px;
     border: 1px solid #ccc;

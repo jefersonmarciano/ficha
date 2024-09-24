@@ -34,16 +34,17 @@ function ResourceBars({ resources, setCharacter }) {
         <div key={resource} className="resource-bar">
           <h3>{resource.charAt(0).toUpperCase() + resource.slice(1)}</h3>
           <div className="resource-inputs">
-            <div className="input-group">
+            <div className="resource-input-group">
               <label>Máximo:</label>
               <input
                 type="number"
                 value={max}
                 onChange={(e) => handleResourceChange(resource, 'max', e.target.value)}
                 min="0"
+                className="resource-input"
               />
             </div>
-            <div className="input-group">
+            <div className="resource-input-group">
               <label>Atual:</label>
               <input
                 type="number"
@@ -51,6 +52,7 @@ function ResourceBars({ resources, setCharacter }) {
                 onChange={(e) => handleResourceChange(resource, 'current', e.target.value)}
                 min="0"
                 max={max}
+                className="resource-input"
               />
             </div>
           </div>

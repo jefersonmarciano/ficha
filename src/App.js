@@ -8,6 +8,7 @@ import AdditionalInfo from './components/AdditionalInfo';
 import WeaponTable from './components/WeaponTable';
 import Backpack from './components/Backpack';
 import './App.css';
+import backpackImage from './bags.png'; // Importa a imagem
 
 function App() {
   const [character, setCharacter] = useState({
@@ -71,7 +72,9 @@ function App() {
         <div className="top-section">
           <div className="profile-container">
             <CharacterInfo character={character} setCharacter={setCharacter} />
-            <button onClick={() => setShowBackpack(!showBackpack)}>Mochila</button>
+            <button onClick={() => setShowBackpack(!showBackpack)} className="backpack-button">
+              <img src={backpackImage} alt="Mochila" className="backpack-icon" /> Mochila
+            </button>
             {showBackpack && (
               <Backpack
                 backpack={character.backpack}
