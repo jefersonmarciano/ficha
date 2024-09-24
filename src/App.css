@@ -113,9 +113,19 @@ body {
   color: #333;
   margin: 5px 0;
 }
-
+.magic-popup-button{
+  padding: 8px 12px; /* Reduz o padding dos botões */
+  font-size: 14px; /* Reduz o tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  background-color: #8756e2; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove a borda padrão */
+  cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+  display: flex;
+  align-items: center;
+}
 .magic-button,
-.magic-popup-button,
+
 .backpack-button {
   padding: 8px 12px; /* Reduz o padding dos botões */
   font-size: 14px; /* Reduz o tamanho da fonte */

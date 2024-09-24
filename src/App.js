@@ -16,6 +16,7 @@ import MagicTablePopupCiclo2Fisico from './components/MagicTablePopupCiclo2Fisic
 import MagicTablePopupCiclo2Magico from './components/MagicTablePopupCiclo2Magico';
 import './App.css';
 import backpackImage from './bags.png';
+
 import magiasData from './data/magias.json';
 
 function App() {
@@ -104,6 +105,9 @@ function App() {
               <button onClick={() => setShowBackpack(!showBackpack)} className="backpack-button">
                 <img src={backpackImage} alt="Mochila" className="backpack-icon" /> Mochila
               </button>
+              <button onClick={() => setShowMagicPopup(true)} className="magic-popup-button">
+                Ver Magias Selecionadas
+              </button>
               <button onClick={() => setShowMagicTablePopupCiclo1Fisico(true)} className="magic-button">
                 Magias Ciclo 1 - Físico
               </button>
@@ -116,9 +120,7 @@ function App() {
               <button onClick={() => setShowMagicTablePopupCiclo2Magico(true)} className="magic-button">
                 Magias Ciclo 2 - Mágico
               </button>
-              <button onClick={() => setShowMagicPopup(true)} className="magic-popup-button">
-                Ver Magias Selecionadas
-              </button>
+              
             </div>
             {showBackpack && (
               <Backpack
@@ -180,7 +182,12 @@ function App() {
           />
         )}
         
-       
+        {showMagicPopup && (
+          <MagicPopup
+            skills={selectedSkills}
+            onClose={() => setShowMagicPopup(false)}
+          />
+        )}
       </div>
     </div>
   );
