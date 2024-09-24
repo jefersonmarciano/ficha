@@ -179,16 +179,8 @@ function App() {
             selectedSkills={selectedSkills} // Passa as magias selecionadas
           />
         )}
-        <div className="magic-details-section">
-          <h1>Detalhes da Magia</h1>
-          <MagicDetails magia={selectedMagic} />
-        </div>
-        {showMagicPopup && (
-          <MagicPopup
-            skills={selectedSkills}
-            onClose={() => setShowMagicPopup(false)}
-          />
-        )}
+        
+       
       </div>
     </div>
   );
