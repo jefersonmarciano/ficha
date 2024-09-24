@@ -1,0 +1,50 @@
+.magic-table-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .magic-table-popup {
+    background: #2c3e50;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 1000px; /* Aumenta a largura máxima do popup */
+    max-height: 90%; /* Aumenta a altura máxima do popup */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    text-align: center;
+    color: #ecf0f1;
+    position: relative;
+  }
+  
+  .close-button {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-button:hover {
+    background: #c0392b;
+  }
+  
+  .magic-table-popup h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+  }

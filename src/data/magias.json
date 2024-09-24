@@ -1,0 +1,515 @@
+{
+    "ciclo1": {
+      "fisico": [
+        {
+          "requisito": "10",
+          "tipo": "físico",
+          "habilidade": "Ataque Elemental",
+          "acao": "Padrão",
+          "recurso": "SP",
+          "duracao": "Instantâneo",
+          "efeito1": "+2d8 dano",
+          "efeito2": "-----",
+          "alcance": "Arma",
+          "descricao": "Causa 2d8 de dano extra no ataque"
+        },
+        {
+          "requisito": "5",
+          "tipo": "físico",
+          "habilidade": "Trinca",
+          "acao": "Padrão",
+          "recurso": "SP",
+          "duracao": "Instantâneo",
+          "efeito1": "-1 CA (res. Reflexo)",
+          "efeito2": "Dura combate",
+          "alcance": "Melee",
+          "descricao": "Deixa o alvo em estado de vulnerabilidade. -1 CA. (res reflexo) (duração: combate)"
+        },
+        {
+          "requisito": "10",
+          "tipo": "físico",
+          "habilidade": "Segunda Pele",
+          "acao": "Bônus/Livre",
+          "recurso": "MP/SP",
+          "duracao": "4 ataques",
+          "efeito1": "+RD = mod",
+          "efeito2": "-----",
+          "alcance": "Self",
+          "descricao": "Se protege com seu elemento. (mod como RD)"
+        },
+        {
+          "requisito": "5",
+          "tipo": "físico",
+          "habilidade": "Imbuir Arma",
+          "acao": "Padrão",
+          "recurso": "MP/SP",
+          "duracao": "Combate",
+          "efeito1": "+1d6 dano",
+          "efeito2": "Dura combate",
+          "alcance": "Self",
+          "descricao": "Melhora sua arma com +1d6 de dano."
+        },
+        {
+          "requisito": "10",
+          "tipo": "físico",
+          "habilidade": "Toque Divino",
+          "acao": "Padrão",
+          "recurso": "MP/SP",
+          "duracao": "Instantâneo",
+          "efeito1": "2d8+mod cura",
+          "efeito2": "-----",
+          "alcance": "Melee/Self",
+          "descricao": "Cura 2d8+mod"
+        },
+        {
+          "requisito": "10",
+          "tipo": "físico",
+          "habilidade": "Taunt",
+          "acao": "Bônus/Livre",
+          "recurso": "SP",
+          "duracao": "1 turno",
+          "efeito1": "Provoca (Res. Von)",
+          "efeito2": "Dura 1 turno",
+          "alcance": "Move",
+          "descricao": "Provoca um inimigo. (res Vontade)"
+        }
+      ],
+      
+      "magico": 
+        [
+            {
+              "requisito": "10",
+              "tipo": "mágico",
+              "magia": "Energia Elemental",
+              "acao": "Padrão",
+              "recurso": "MP",
+              "duracao": "Instantâneo",
+              "efeito1": "3d8+mod dano",
+              "efeito2": "Efeito Elemen.",
+              "alcance": "Move",
+              "descricao": "Causa (3d8+mod) aplica o efeito do elemento utilizado."
+            },
+            {
+              "requisito": "10",
+              "tipo": "mágico",
+              "magia": "Onda de Vida",
+              "acao": "Padrão",
+              "recurso": "MP/SP",
+              "duracao": "Instantâneo",
+              "efeito1": "2d4+mod cura",
+              "efeito2": "-----",
+              "alcance": "Move/2",
+              "descricao": "Cura 2d4+mod"
+            },
+            {
+              "requisito": "10",
+              "tipo": "mágico",
+              "magia": "Armadura Arcana",
+              "acao": "Padrão",
+              "recurso": "SP",
+              "duracao": "Concentração",
+              "efeito1": "+2CA",
+              "efeito2": "-----",
+              "alcance": "Move/2",
+              "descricao": "Aumenta a defesa do alvo. (+2CA, stacka com armadura)"
+            },
+            {
+              "requisito": "10",
+              "tipo": "mágico",
+              "magia": "Clarear",
+              "acao": "Bônus/Livre",
+              "recurso": "MP",
+              "duracao": "Concentração",
+              "efeito1": "Cria Luz",
+              "efeito2": "-----",
+              "alcance": "15m",
+              "descricao": "Cria uma orb de luz que ilumina com uma tocha da cor do seu elemento. (short, 15m)"
+            },
+            {
+              "requisito": "5",
+              "tipo": "mágico",
+              "magia": "Bless Lv 1",
+              "acao": "Padrão",
+              "recurso": "MP",
+              "duracao": "Instantâneo",
+              "efeito1": "+1 Acerto",
+              "efeito2": "Dura Combate",
+              "alcance": "Move/2",
+              "descricao": "Fornece bônus de acerto. (+1) (duração: combate)"
+            },
+            {
+              "requisito": "10",
+              "tipo": "mágico",
+              "magia": "Proteção Elemental",
+              "acao": "Padrão",
+              "recurso": "SP",
+              "duracao": "Concentração",
+              "efeito1": "Vantagem Res.",
+              "efeito2": "-----",
+              "alcance": "Move/2",
+              "descricao": "Alvo recebe bônus em testes de resistência. (Vantagem)"
+            },
+            {
+              "requisito": "5",
+              "tipo": "mágico",
+              "magia": "Visão Mística",
+              "acao": "Bônus/Livre",
+              "recurso": "SP",
+              "duracao": "Instantâneo",
+              "efeito1": "Visão Seres",
+              "efeito2": "Visão Elemental",
+              "alcance": "30m",
+              "descricao": "Você pode ver auras Elementais e seres próximos. (Range médio (30m))"
+            },
+            {
+              "requisito": "5",
+              "tipo": "mágico",
+              "magia": "Queda Suave",
+              "acao": "Bônus/Livre",
+              "recurso": "MP",
+              "duracao": "Concentração",
+              "efeito1": "Queda Lenta",
+              "efeito2": "-----",
+              "alcance": "5m",
+              "descricao": "Alvo cai lentamente. AoE, Alvo precisa querer receber o buff"
+            },
+            {
+              "requisito": "10",
+              "tipo": "mágico",
+              "magia": "Link Mental",
+              "acao": "Bônus/Livre",
+              "recurso": "MP",
+              "duracao": "Instantâneo",
+              "efeito1": "Env/Rec Msg",
+              "efeito2": "-----",
+              "alcance": "Move/2",
+              "descricao": "Permite conectar mentalmente a outra pessoa, enviar e receber uma mensagem"
+            }
+          ]
+          
+        
+      
+    },
+    "ciclo2": {
+      "fisico":{
+        "habilidades": [
+          {
+            "requisito": "14",
+            "tipo": "Físico",
+            "habilidade": "Aura de Cura",
+            "acao": "Padrão",
+            "recurso": "MP",
+            "duracao": "Concentração",
+            "efeito1": "(1d4+mod)/round",
+            "efeito2": "Gera uma aura de cura por turno.",
+            "alcance": "Range: melee (5m)",
+            "descricao": "Gera uma aura de cura que restaura pontos de vida por turno para os aliados dentro do alcance."
+          },
+          {
+            "requisito": "11",
+            "tipo": "Físico",
+            "habilidade": "Golpe Destruidor",
+            "acao": "Padrão",
+            "recurso": "SP",
+            "duracao": "Instantâneo",
+            "efeito1": "3d12+mod",
+            "efeito2": "Ignora RD",
+            "alcance": "Arma",
+            "descricao": "Golpe devastador que ignora a resistência a danos e causa 3d12 + modificador de dano físico."
+          },
+          {
+            "requisito": "13",
+            "tipo": "Físico",
+            "habilidade": "Derrubada",
+            "acao": "Padrão",
+            "recurso": "SP",
+            "duracao": "Instantâneo",
+            "efeito1": "4d6+mod",
+            "efeito2": "Vulnerável e Prone",
+            "alcance": "Melee",
+            "descricao": "Derruba o inimigo, causando 4d6 + modificador de dano físico e deixando-o vulnerável e caído."
+          },
+          {
+            "requisito": "10",
+            "tipo": "Físico",
+            "habilidade": "Contenção",
+            "acao": "Padrão",
+            "recurso": "SP",
+            "duracao": "Instantâneo",
+            "efeito1": "3d4",
+            "efeito2": "mov/2, ação para curar",
+            "alcance": "Melee",
+            "descricao": "Reduz a movimentação do inimigo pela metade e causa dano."
+          },
+          {
+            "requisito": "15",
+            "tipo": "Físico",
+            "habilidade": "Hiperfoco",
+            "acao": "Bônus",
+            "recurso": "SP",
+            "duracao": "Instantâneo",
+            "efeito1": "+4 Acerto",
+            "efeito2": "Duração: 1 ataque",
+            "alcance": "Self",
+            "descricao": "Aumenta sua precisão no próximo ataque, garantindo +4 no acerto."
+          },
+          {
+            "requisito": "15",
+            "tipo": "Físico",
+            "habilidade": "Frenesi",
+            "acao": "Padrão",
+            "recurso": "SP",
+            "duracao": "Instantâneo",
+            "efeito1": "Acerto-CA = Dano",
+            "efeito2": "Duração: 2 ataques",
+            "alcance": "Self",
+            "descricao": "Seus próximos dois ataques têm dano extra baseado na diferença entre acerto e CA do inimigo."
+          },
+          {
+            "requisito": "12",
+            "tipo": "Físico",
+            "habilidade": "Teia",
+            "acao": "Bônus",
+            "recurso": "SP",
+            "duracao": "Instantâneo",
+            "efeito1": "Move/2",
+            "efeito2": "Burn: 2d6/turno",
+            "alcance": "10m",
+            "descricao": "Cria uma teia que prende o inimigo e reduz sua movimentação. Se queimada, causa 2d6 de dano por turno."
+          },
+          {
+            "requisito": "11",
+            "tipo": "Físico",
+            "habilidade": "Névoa",
+            "acao": "Bônus",
+            "recurso": "MP",
+            "duracao": "Concentração",
+            "efeito1": "Furtividade",
+            "efeito2": "DC (20+Cast), Res. Percep.",
+            "alcance": "15m",
+            "descricao": "Cria uma névoa que oferece camuflagem. Todos na área entram em furtividade, dificultando a percepção inimiga."
+          },
+          {
+            "requisito": "8",
+            "tipo": "Físico",
+            "habilidade": "Pele de Pedra",
+            "acao": "Padrão",
+            "recurso": "SP",
+            "duracao": "Concentração",
+            "efeito1": "Dano/2",
+            "efeito2": "Resist Núcleo",
+            "alcance": "Self",
+            "descricao": "Você se protege, reduzindo metade do dano recebido e ganhando resistência a ataques."
+          },
+          {
+            "requisito": "9",
+            "tipo": "Físico",
+            "habilidade": "Taunt",
+            "acao": "Bônus/Livre",
+            "recurso": "SP",
+            "duracao": "3 turnos",
+            "efeito1": "Provoca 1",
+            "efeito2": "Duração: 3 Turnos",
+            "alcance": "Move",
+            "descricao": "Provoca um inimigo, forçando-o a focar seus ataques em você por 3 turnos."
+          }
+        ]
+      }
+      ,
+      "magico":[
+        {
+          "requisito": "12",
+          "tipo": "mágico",
+          "magia": "Rajada de Trevas",
+          "acao": "Padrão",
+          "recurso": "MP",
+          "duracao": "Instantâneo",
+          "efeito1": "3d12+(Mod/2) dano",
+          "efeito2": "-----",
+          "alcance": "Move",
+          "descricao": "Dano Mágico Single Target"
+        },
+        {
+          "requisito": "14",
+          "tipo": "mágico",
+          "magia": "Explosão de Trevas",
+          "acao": "Padrão",
+          "recurso": "SP",
+          "duracao": "Instantâneo",
+          "efeito1": "3d10 dano",
+          "efeito2": "Área 2x2",
+          "alcance": "Move",
+          "descricao": "Cria uma área de dano do elemento. (área 2x2)"
+        },
+        {
+          "requisito": "13",
+          "tipo": "mágico",
+          "magia": "Muro Elemental",
+          "acao": "Padrão",
+          "recurso": "MP/SP",
+          "duracao": "3 hits",
+          "efeito1": "3d10 dano",
+          "efeito2": "3 Rounds ou impactos",
+          "alcance": "15m",
+          "descricao": "Cria uma parede do seu elemento que causa dano a quem cruzar"
+        },
+        {
+          "requisito": "10",
+          "tipo": "mágico",
+          "magia": "Cura",
+          "acao": "Padrão",
+          "recurso": "MP",
+          "duracao": "Instantâneo",
+          "efeito1": "5d4+mod",
+          "efeito2": "-----",
+          "alcance": "30m",
+          "descricao": "Cura Single"
+        },
+        {
+          "requisito": "13",
+          "tipo": "mágico",
+          "magia": "Cura AoE",
+          "acao": "Padrão",
+          "recurso": "MP",
+          "duracao": "Instantâneo",
+          "efeito1": "3d4+mod",
+          "efeito2": "-----",
+          "alcance": "15m",
+          "descricao": "Cura em área"
+        },
+        {
+          "requisito": "14",
+          "tipo": "mágico",
+          "magia": "Bless Lv. 2",
+          "acao": "Padrão",
+          "recurso": "MP",
+          "duracao": "Concentração",
+          "efeito1": "+1d4 acerto",
+          "efeito2": "+1d10 dano",
+          "alcance": "15m",
+          "descricao": "Dá +1d4 pra acerto e +1d10 de dano"
+        },
+        {
+          "requisito": "14",
+          "tipo": "mágico",
+          "magia": "Blink",
+          "acao": "Padrão/Move",
+          "recurso": "MP/SP",
+          "duracao": "Instantâneo",
+          "efeito1": "Teleport",
+          "efeito2": "-----",
+          "alcance": "-----",
+          "descricao": "Teleporta em curto alcance"
+        },
+        {
+          "requisito": "15",
+          "tipo": "mágico",
+          "magia": "Haste",
+          "acao": "Padrão",
+          "recurso": "MP",
+          "duracao": "Concentração",
+          "efeito1": "+1 Ação Padrão",
+          "efeito2": "Interrupt -> Stun no alvo",
+          "alcance": "15m",
+          "descricao": "Acelera o alvo, fornecendo uma ação padrão extra no turno."
+        },
+        {
+          "requisito": "8",
+          "tipo": "mágico",
+          "magia": "Visão no Escuro",
+          "acao": "Bônus",
+          "recurso": "SP",
+          "duracao": "Concentração",
+          "efeito1": "Visão no escuro",
+          "efeito2": "Luz te cega",
+          "alcance": "50m",
+          "descricao": "Você enxerga no escuro, porém fica sensível a luz enquanto a magia estiver ativa."
+        },
+        {
+          "requisito": "9",
+          "tipo": "mágico",
+          "magia": "Prender",
+          "acao": "Padrão",
+          "recurso": "MP",
+          "duracao": "Concentração",
+          "efeito1": "Entangle",
+          "efeito2": "Res For",
+          "alcance": "15m",
+          "descricao": "Deixa com status de Entangle, precisa de res de força para se soltar."
+        },
+        {
+          "requisito": "9",
+          "tipo": "mágico",
+          "magia": "Nox",
+          "acao": "Bônus",
+          "recurso": "MP",
+          "duracao": "Concentração",
+          "efeito1": "Remove luz",
+          "efeito2": "-----",
+          "alcance": "30m",
+          "descricao": "Tirar a luz do ambiente."
+        },
+        {
+          "requisito": "12",
+          "tipo": "mágico",
+          "magia": "Perturbação",
+          "acao": "Padrão",
+          "recurso": "MP/SP",
+          "duracao": "Instantâneo",
+          "efeito1": "Queima 3 de mana",
+          "efeito2": "Interrompe Concentrações",
+          "alcance": "15m",
+          "descricao": "Queima a mana do inimigo e interrompe concentração, resistência com Vontade."
+        },
+        {
+          "requisito": "10",
+          "tipo": "mágico",
+          "magia": "Arma Espiritual",
+          "acao": "Padrão",
+          "recurso": "MP/SP",
+          "duracao": "Concentração",
+          "efeito1": "Depende da Arma",
+          "efeito2": "-----",
+          "alcance": "15m",
+          "descricao": "Cria uma arma espiritual que flutua (Opta por uma arma existente)."
+        },
+        {
+          "requisito": "10",
+          "tipo": "mágico",
+          "magia": "Exiva",
+          "acao": "Bônus",
+          "recurso": "SP",
+          "duracao": "Instantâneo",
+          "efeito1": "Direção obj.",
+          "efeito2": "-----",
+          "alcance": "50m",
+          "descricao": "Você sabe para onde estão seus objetivos."
+        },
+        {
+          "requisito": "14",
+          "tipo": "mágico",
+          "magia": "Idiomas",
+          "acao": "Bônus",
+          "recurso": "SP",
+          "duracao": "Concentração",
+          "efeito1": "Idiomas",
+          "efeito2": "-----",
+          "alcance": "Self",
+          "descricao": "Você fala qualquer idioma."
+        },
+        {
+          "requisito": "11",
+          "tipo": "mágico",
+          "magia": "Guardião",
+          "acao": "Bônus",
+          "recurso": "SP",
+          "duracao": "Concentração",
+          "efeito1": "Divide o dano",
+          "efeito2": "50% do dano ao aliado",
+          "alcance": "Aliado",
+          "descricao": "Absorve 50% do dano que seu aliado escolhido receber."
+        }
+      ]
+      
+    }
+  }

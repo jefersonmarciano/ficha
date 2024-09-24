@@ -1,0 +1,38 @@
+.magic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .magic-table th,
+  .magic-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .magic-table th {
+    background-color: #4CAF50;
+    color: rgb(95, 94, 94);
+  }
+  
+  .magic-table tr:nth-child(even) {
+    background-color: #747474;
+  }
+  
+  .magic-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .magic-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .magic-table-container {
+    max-height: 400px; /* Limita a altura máxima da tabela */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  }
