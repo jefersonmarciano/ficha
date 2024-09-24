@@ -1,0 +1,99 @@
+.backpack-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    overflow: hidden; /* Adicionado para garantir que o conteúdo não ultrapasse os limites */
+}
+
+.backpack-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backpack-popup h3 {
+    margin: 0;
+}
+
+.backpack-popup .table-container {
+    max-height: 300px; /* Limita a altura da tabela */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    margin-top: 20px;
+}
+
+.backpack-popup table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed; /* Adicionado para garantir que a tabela se ajuste ao contêiner */
+}
+
+.backpack-popup th, .backpack-popup td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* Adicionado para quebrar palavras longas */
+}
+
+.backpack-popup th {
+    background-color: #f2f2f2;
+}
+
+.backpack-popup .money-section {
+    margin-top: 20px;
+}
+
+.backpack-popup .money-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.backpack-popup .close-button,
+.backpack-popup .add-item-button,
+.backpack-popup .remove-item-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.backpack-popup .close-button {
+    background-color: #dc3545;
+}
+
+.backpack-popup .close-button:hover,
+.backpack-popup .add-item-button:hover,
+.backpack-popup .remove-item-button:hover {
+    background-color: #0056b3;
+}
+
+.backpack-popup .close-button:hover {
+    background-color: #c82333;
+}
+
+.backpack-popup .remove-item-button {
+    background-color: #dc3545;
+}
+
+.backpack-popup .remove-item-button:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para inputs */
+.backpack-popup input[type="text"],
+.backpack-popup input[type="number"] {
+    width: 80%; /* Ajuste a largura conforme necessário */
+    padding: 5px;
+    box-sizing: border-box;
+}

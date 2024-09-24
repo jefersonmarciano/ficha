@@ -1,0 +1,65 @@
+.stats-container {
+    background-color: #f9f5eb;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .stats-container h2 {
+    color: #5c4033;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .stats-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #5c4033;
+    text-align: center;
+  }
+  
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .stat-row input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .stat-row .stat-name {
+    text-align: left;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .stat-row .mod {
+    text-align: center;
+    font-weight: bold;
+    color: #e74c3c;
+  }
+
+  /* Adicione estas regras para melhorar a aparência em telas menores */
+  @media (max-width: 600px) {
+    .stats-header, .stat-row {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+    .stat-row .stat-name {
+      text-align: center;
+    }
+  }
