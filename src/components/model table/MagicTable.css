@@ -36,3 +36,13 @@
     max-height: 400px; /* Limita a altura máxima da tabela */
     overflow-y: auto; /* Adiciona rolagem vertical se necessário */
   }
+  
+  @media (max-width: 360px) {
+    .magic-table {
+      font-size: 12px;
+    }
+
+    .magic-table-container {
+      overflow-x: auto;
+    }
+  }

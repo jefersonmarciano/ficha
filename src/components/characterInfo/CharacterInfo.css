@@ -200,3 +200,41 @@ select:focus {
     border-radius: 5px;
     font-size: 1em;
 }
+
+@media (max-width: 360px) {
+    .character-info {
+        flex-direction: column;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image-container {
+        margin-bottom: 10px;
+    }
+
+    .character-name-level {
+        width: 100%;
+        text-align: center;
+    }
+
+    .character-details {
+        width: 100%;
+    }
+
+    .character-input-group {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .character-input-group label {
+        margin-bottom: 5px;
+    }
+
+    .character-select,
+    .player-name-input {
+        width: 100%;
+    }
+}

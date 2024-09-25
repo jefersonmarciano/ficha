@@ -65,13 +65,13 @@ function App() {
   });
 
   const [showBackpack, setShowBackpack] = useState(false);
-  const [showMagicPopup, setShowMagicPopup] = useState(false); // Estado para controlar a visibilidade do popup
+  const [showMagicPopup, setShowMagicPopup] = useState(false); 
   const [showMagicTablePopupCiclo1Fisico, setShowMagicTablePopupCiclo1Fisico] = useState(false);
   const [showMagicTablePopupCiclo1Magico, setShowMagicTablePopupCiclo1Magico] = useState(false);
   const [showMagicTablePopupCiclo2Fisico, setShowMagicTablePopupCiclo2Fisico] = useState(false);
   const [showMagicTablePopupCiclo2Magico, setShowMagicTablePopupCiclo2Magico] = useState(false);
   const [selectedMagic, setSelectedMagic] = useState(null);
-  const [selectedSkills, setSelectedSkills] = useState([]); // Estado para armazenar as magias selecionadas
+  const [selectedSkills, setSelectedSkills] = useState([]);
 
   useEffect(() => {
     const savedCharacter = localStorage.getItem('character');
@@ -133,8 +133,9 @@ function App() {
                 onClose={() => setShowBackpack(false)}
               />
             )}
-            <WeaponTable weapons={character.weapons} setCharacter={setCharacter} />
+            
           </div>
+          
           <div className="right-container">
             <div className="resources-container">
               <ResourceBars resources={character.resources} setCharacter={setCharacter} />
@@ -144,6 +145,11 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="weapon-table-container weapon-table-margin">
+          <WeaponTable weapons={character.weapons} setCharacter={setCharacter} />
+        </div>
+        
+
         <div className="bottom-section">
           <div className="stats-container">
             <Stats stats={character.stats} setCharacter={setCharacter} />
@@ -152,6 +158,7 @@ function App() {
             <SkillTable character={character} setCharacter={setCharacter} />
           </div>
         </div>
+        
         {showMagicTablePopupCiclo1Fisico && (
           <MagicTablePopupCiclo1Fisico
             magias={magiasData.ciclo1.fisico}

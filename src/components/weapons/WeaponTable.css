@@ -5,7 +5,7 @@
     padding: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     overflow-x: none; /* Adiciona rolagem horizontal se necessário */
-    width: 100%;
+    
     max-width: 670px; /* Define uma largura máxima */
     margin: 20px auto; /* Centraliza a tabela */
 }
@@ -19,7 +19,7 @@
 .weapon-table table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px; /* Garante que a tabela não fique muito estreita em telas pequenas */
+    
 }
 
 .weapon-table th, .weapon-table td {
@@ -65,4 +65,29 @@
 
 .weapon-table .generation-select {
     width: 60px; /* Ajuste a largura conforme necessário */
+}
+
+@media (max-width: 750px) {
+    .weapon-table {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .weapon-table {
+        overflow-x: auto;
+    }
+
+    .weapon-table table {
+        font-size: 12px;
+    }
+
+    .small-input {
+        width: 30px;
+    }
+
+    .weapon-image {
+        max-width: 30px;
+        max-height: 30px;
+    }
 }

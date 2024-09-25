@@ -83,3 +83,22 @@
     margin-top: 2px;
     color: #7f8c8d;
 }
+
+@media (max-width: 360px) {
+    .resource-bars-container {
+        flex-direction: column;
+    }
+
+    .resource-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .resource-inputs {
+        flex-direction: column;
+    }
+
+    .resource-input-group {
+        margin-bottom: 5px;
+    }
+}

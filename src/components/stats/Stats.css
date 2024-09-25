@@ -63,3 +63,26 @@
       text-align: center;
     }
   }
+
+  @media (max-width: 360px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-header {
+      display: none;
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .stat-row input,
+    .stat-row .stat-name,
+    .stat-row .mod {
+      font-size: 12px;
+    }
+  }

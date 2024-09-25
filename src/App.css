@@ -33,7 +33,7 @@ body {
 }
 
 .button-container {
-  display: flex;
+  display: grid;
   gap: 10px; /* Espaçamento entre os botões */
   
 }
@@ -121,11 +121,10 @@ body {
   color: white; /* Cor do texto */
   border: none; /* Remove a borda padrão */
   cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-  display: flex;
+  
   align-items: center;
 }
 .magic-button,
-
 .backpack-button {
   padding: 8px 12px; /* Reduz o padding dos botões */
   font-size: 14px; /* Reduz o tamanho da fonte */
@@ -134,7 +133,7 @@ body {
   color: white; /* Cor do texto */
   border: none; /* Remove a borda padrão */
   cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
-  display: flex;
+  
   align-items: center;
 }
 
@@ -285,10 +284,17 @@ header h1 {
 }
 
 .magic-icon {
-  width: 30px; /* Altere o valor para o tamanho desejado */
-  height: 30px; /* Altere o valor para o tamanho desejado */
+  width: 30px; 
+  height: 30px; 
 }
 #magic-icon{
   color: black
   ;
+}
+
+.weapon-table-margin {
+  margin-top: 20px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 15px;
 }

@@ -134,3 +134,32 @@
 .backpack-popup .money-section input[type="number"]:focus {
     border-color: #007bff;
 }
+
+@media (max-width: 360px) {
+  .backpack-popup {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .backpack-popup table {
+    font-size: 12px;
+  }
+
+  .backpack-popup input {
+    width: 100%;
+  }
+
+  .money-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 750px) {
+  .table-container {
+    overflow-x: auto;
+  }
+}
