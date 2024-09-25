@@ -35,7 +35,7 @@ body {
 .button-container {
   display: flex;
   gap: 10px; /* Espaçamento entre os botões */
-  flex-wrap: wrap; /* Permite que os botões quebrem linha se necessário */
+  
 }
 
 .right-container {
@@ -282,4 +282,13 @@ header h1 {
 
 .backpack-button:hover, .magic-button:hover {
   background-color: #4a3226;
+}
+
+.magic-icon {
+  width: 30px; /* Altere o valor para o tamanho desejado */
+  height: 30px; /* Altere o valor para o tamanho desejado */
+}
+#magic-icon{
+  color: black
+  ;
 }

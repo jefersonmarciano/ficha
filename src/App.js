@@ -16,6 +16,9 @@ import MagicTablePopupCiclo2Fisico from './components/tabelas de magias/MagicTab
 import MagicTablePopupCiclo2Magico from './components/tabelas de magias/MagicTablePopupCiclo2Magico';
 import './App.css';
 import backpackImage from './bags.png';
+import { GiMagicBroom } from "react-icons/gi";
+import { GiMagicAxe } from "react-icons/gi";
+import { GiMagickTrick } from "react-icons/gi";
 
 import magiasData from './data/magias.json';
 
@@ -106,19 +109,19 @@ function App() {
                 <img src={backpackImage} alt="Mochila" className="backpack-icon" /> Mochila
               </button>
               <button onClick={() => setShowMagicPopup(true)} className="magic-popup-button">
-                Ver Magias Selecionadas
+              <GiMagicBroom className="magic-icon" /> Ver Magias Selecionadas
               </button>
               <button onClick={() => setShowMagicTablePopupCiclo1Fisico(true)} className="magic-button">
-                Magias Ciclo 1 - Físico
+              <GiMagicAxe className="magic-icon" id='magic-icon'/> Ciclo 1 - Físico
               </button>
               <button onClick={() => setShowMagicTablePopupCiclo1Magico(true)} className="magic-button">
-                Magias Ciclo 1 - Mágico
+              <GiMagickTrick className="magic-icon" id='magic-icon'/> Ciclo 1 - Mágico
               </button>
               <button onClick={() => setShowMagicTablePopupCiclo2Fisico(true)} className="magic-button">
-                Magias Ciclo 2 - Físico
+              <GiMagicAxe className="magic-icon" id='magic-icon'/>  Ciclo 2 - Físico
               </button>
               <button onClick={() => setShowMagicTablePopupCiclo2Magico(true)} className="magic-button">
-                Magias Ciclo 2 - Mágico
+              <GiMagickTrick className="magic-icon" id='magic-icon'/> Ciclo 2 - Mágico
               </button>
               
             </div>
