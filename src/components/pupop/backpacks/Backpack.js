@@ -24,9 +24,9 @@ function Backpack({ backpack, money, setCharacter, onClose }) {
 
   return (
     <div className="backpack-popup">
+      <button className="close-buttonB" onClick={onClose}>X</button>
       <div className="backpack-header">
-        <h3>Mochila</h3>
-        <button className="close-button" onClick={onClose}>X</button>
+        <h3>Mochila</h3>        
       </div>
       <div className="table-container">
         <table>

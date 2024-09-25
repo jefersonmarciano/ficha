@@ -1,6 +1,6 @@
 import React from 'react';
 import './MagicTablePopup.css'; // Reutiliza os estilos do popup
-import MagicTable from './MagicTable';
+import MagicTable from '../model table/MagicTable';
 
 const MagicTablePopupCiclo1Magico = ({ magias, onClose, onSelect, selectedSkills }) => {
   return (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './WeaponTable.css';
+import '../weapons/WeaponTable.css';
 
 function WeaponTable({ weapons, setCharacter }) {
   const [weaponImages, setWeaponImages] = useState([]);
@@ -7,7 +7,7 @@ function WeaponTable({ weapons, setCharacter }) {
   useEffect(() => {
     const newWeaponImages = weapons.map(weapon => {
       if (weapon.weaponType) {
-        return require(`../img/${weapon.weaponType}.png`);
+        return require(`../../img/${weapon.weaponType}.png`);
       }
       return '';
     });

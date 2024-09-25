@@ -1,5 +1,5 @@
 import React from 'react';
-import './MagicTablePopup.css'; // Importa os estilos do popup
+import '../tabelas de magias/MagicTablePopup.css'; // Importa os estilos do popup
 import MagicTable from './MagicTable';
 
 const MagicTablePopup = ({ magias, onClose }) => {

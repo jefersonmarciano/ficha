@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MagicTablePopup.css'; // Reutiliza os estilos do popup
-import MagicTable from './MagicTable';
+import MagicTable from '../model table/MagicTable';
 
 const MagicTablePopupCiclo2Magico = ({ magias, onClose }) => {
   const [selectedSkills, setSelectedSkills] = useState([]);
