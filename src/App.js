@@ -107,15 +107,15 @@ function App() {
             <div className="button-container">
               <button onClick={() => setShowBackpack(!showBackpack)} className="backpack-button">
                 <img src={backpackImage} alt="Mochila" className="backpack-icon" /> Mochila
-              </button>
-              <button onClick={() => setShowMagicPopup(true)} className="magic-popup-button">
-              <GiMagicBroom className="magic-icon" /> Ver Magias Selecionadas
-              </button>
-              <button onClick={() => setShowMagicTablePopupCiclo1Fisico(true)} className="magic-button">
+              </button>              
+              <button onClick={() => setShowMagicTablePopupCiclo1Fisico(true)} className="magic-button ciclo1-fisico-button">
               <GiMagicAxe className="magic-icon" id='magic-icon'/> Ciclo 1 - Físico
               </button>
               <button onClick={() => setShowMagicTablePopupCiclo1Magico(true)} className="magic-button">
               <GiMagickTrick className="magic-icon" id='magic-icon'/> Ciclo 1 - Mágico
+              </button>
+              <button onClick={() => setShowMagicPopup(true)} className="magic-popup-button">
+              <GiMagicBroom className="magic-icon" /> Ver Magias Selecionadas
               </button>
               <button onClick={() => setShowMagicTablePopupCiclo2Fisico(true)} className="magic-button">
               <GiMagicAxe className="magic-icon" id='magic-icon'/>  Ciclo 2 - Físico

@@ -65,9 +65,7 @@
   }
 
   @media (max-width: 360px) {
-    .stats-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    
 
     .stats-header {
       display: none;
