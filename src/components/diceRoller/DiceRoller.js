@@ -20,6 +20,12 @@ function DiceRoller() {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      rollDice();
+    }
+  };
+
   return (
     <div className="dice-roller">
       <h3>Rolagem de Dados</h3>
@@ -28,6 +34,7 @@ function DiceRoller() {
           type="text"
           value={diceExpression}
           onChange={(e) => setDiceExpression(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Ex: 1D20+3"
         />
         <button onClick={rollDice}>Rolar</button>
