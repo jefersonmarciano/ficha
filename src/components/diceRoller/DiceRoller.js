@@ -6,15 +6,31 @@ function DiceRoller() {
   const [result, setResult] = useState(null);
 
   const rollDice = () => {
-    const regex = /(\d+)[dD](\d+)([+-]\d+)?/;
-    const match = diceExpression.match(regex);
+    const regex = /(\d+)?d(\d+)([+-]\d+)?/g;
+    const parts = diceExpression.match(regex);
 
-    if (match) {
-      const [, quantity, sides, modifier] = match;
-      const rolls = Array(parseInt(quantity)).fill().map(() => Math.floor(Math.random() * parseInt(sides) + 1));
-      const modifierValue = modifier ? parseInt(modifier) : 0;
-      const total = rolls.reduce((sum, roll) => sum + roll, 0) + modifierValue;
-      setResult({ rolls, total, modifier: modifierValue });
+    if (parts) {
+      let total = 0;
+      let rolls = [];
+      let modifier = 0;
+
+      parts.forEach(part => {
+        const [, quantity, sides, mod] = part.match(/(\d+)?d(\d+)([+-]\d+)?/);
+        const numDice = parseInt(quantity) || 1;
+        const numSides = parseInt(sides);
+        const diceRolls = Array(numDice).fill().map(() => Math.floor(Math.random() * numSides) + 1);
+        
+        rolls = [...rolls, ...diceRolls];
+        total += diceRolls.reduce((sum, roll) => sum + roll, 0);
+        
+        if (mod) {
+          const modValue = parseInt(mod);
+          modifier += modValue;
+          total += modValue;
+        }
+      });
+
+      setResult({ rolls, total, modifier });
     } else {
       setResult({ error: 'Expressão de dados inválida' });
     }
@@ -35,7 +51,7 @@ function DiceRoller() {
           value={diceExpression}
           onChange={(e) => setDiceExpression(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ex: 1D20+3"
+          placeholder="Ex: 1d20+3+1d4"
         />
         <button onClick={rollDice}>Rolar</button>
       </div>
