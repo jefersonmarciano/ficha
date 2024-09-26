@@ -14,6 +14,7 @@ import MagicTablePopupCiclo1Fisico from './components/tabelas de magias/MagicTab
 import MagicTablePopupCiclo1Magico from './components/tabelas de magias/MagicTablePopupCiclo1Magico';
 import MagicTablePopupCiclo2Fisico from './components/tabelas de magias/MagicTablePopupCiclo2Fisico';
 import MagicTablePopupCiclo2Magico from './components/tabelas de magias/MagicTablePopupCiclo2Magico';
+import DiceRoller from './components/diceRoller/DiceRoller';
 import './App.css';
 import backpackImage from './bags.png';
 import { GiMagicBroom, GiMagicAxe, GiMagickTrick } from "react-icons/gi";
@@ -161,15 +162,19 @@ function App() {
             <div className="resources-container">
               <ResourceBars resources={character.resources} setCharacter={setCharacter} />
             </div>
-            <div className="additional-info-container">
-              <AdditionalInfo additionalInfo={character.additionalInfo} setCharacter={setCharacter} />
+            <div className="dice-roller-container">
+              <DiceRoller />
             </div>
+            
+            
           </div>
         </div>
         <div className="weapon-table-container weapon-table-margin">
           <WeaponTable weapons={character.weapons} setCharacter={setCharacter} />
         </div>
-        
+        <div className="additional-info-container">
+              <AdditionalInfo additionalInfo={character.additionalInfo} setCharacter={setCharacter} />
+            </div>
 
         <div className="bottom-section">
           <div className="stats-container">
@@ -220,6 +225,7 @@ function App() {
           />
         )}
       </div>
+      
     </div>
   );
 }
