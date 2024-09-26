@@ -21,6 +21,19 @@
     
 }
 
+#weapon-def{
+    width: 50px;
+}
+#weapon-move{
+    width: 50px;
+}
+#weapon-attack{
+    width: 90px;
+}
+#weapon-element{
+    width: 100px;
+}
+
 .weapon-table th, .weapon-table td {
     padding: 1px;
     border: 1px solid #ddd;
@@ -53,7 +66,7 @@
 }
 
 .weapon-table .weapon-image {
-    width: 50px; /* Ajuste a largura conforme necessário */
+    width: 90px; /* Ajuste a largura conforme necessário */
     height: auto;
 }
 
@@ -88,5 +101,100 @@
     .weapon-image {
         max-width: 30px;
         max-height: 30px;
+    }
+}
+
+@media (max-width: 670px) {
+    .weapon-table {
+        overflow-x: visible;
+        padding: 10px;
+    }
+
+    .weapon-table table, 
+    .weapon-table thead, 
+    .weapon-table tbody, 
+    .weapon-table th, 
+    .weapon-table td, 
+    .weapon-table tr {
+        display: block;
+    }
+
+    .weapon-table thead {
+        display: none;
+    }
+
+    .weapon-table tr {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .weapon-table td {
+        border: none;
+        padding: 10px;
+        text-align: center;
+        width: calc(50% - 10px); /* 2 columns with some space between */
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .weapon-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+        color: #5c4033;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .weapon-table input[type="text"], 
+    .weapon-table select {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+
+    #weapon-def,
+    #weapon-move,
+    #weapon-attack,
+    #weapon-element {
+        width: 100%;
+    }
+
+    .weapon-table .small-input {
+        width: 100%;
+        max-width: 80px;
+        margin: 0 auto;
+    }
+
+    .weapon-table .weapon-image {
+        width: 100%;
+        max-width: 90px;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .weapon-table .weapon-type-select,
+    .weapon-table .generation-select {
+        width: 100%;
+    }
+}
+@media (max-width: 360px) {
+    .weapon-table .weapon-image {
+        width: 70px; /* Ajuste a largura conforme necessário */
+        max-height: 70px;
+        
     }
 }

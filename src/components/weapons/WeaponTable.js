@@ -66,8 +66,10 @@ function WeaponTable({ weapons, setCharacter }) {
         </thead>
         <tbody>
           <tr>
-            <td>
+            <td data-label="Tipo de Arma">
               <select
+                className="weapon-type-select"
+                id="weapon-type"
                 value={weapons[0]?.weaponType || ''}
                 onChange={(e) => handleWeaponChange(0, 'weaponType', e.target.value)}
               >
@@ -77,9 +79,10 @@ function WeaponTable({ weapons, setCharacter }) {
                 ))}
               </select>
             </td>
-            <td>
+            <td data-label="Geração">
               <select
                 className="generation-select"
+                id="weapon-generation"
                 value={weapons[0]?.generation || ''}
                 onChange={(e) => handleWeaponChange(0, 'generation', e.target.value)}
               >
@@ -89,16 +92,20 @@ function WeaponTable({ weapons, setCharacter }) {
                 ))}
               </select>
             </td>
-            <td>
+            <td data-label="Ataque">
               <input
                 type="text"
+                className="weapon-attack-input"
+                id="weapon-attack"
                 value={weapons[0]?.attack || ''}
                 onChange={(e) => handleWeaponChange(0, 'attack', e.target.value)}
                 placeholder="Ataque"
               />
             </td>
-            <td>
+            <td data-label="Tipo de Ataque">
               <select
+                className="attack-type-select"
+                id="weapon-attack-type"
                 value={weapons[0]?.attackType || ''}
                 onChange={(e) => handleWeaponChange(0, 'attackType', e.target.value)}
               >
@@ -108,8 +115,10 @@ function WeaponTable({ weapons, setCharacter }) {
                 ))}
               </select>
             </td>
-            <td>
+            <td data-label="Elemento">
               <select
+                className="element-select"
+                id="weapon-element"
                 value={weapons[0]?.element || ''}
                 onChange={(e) => handleWeaponChange(0, 'element', e.target.value)}
               >
@@ -119,25 +128,27 @@ function WeaponTable({ weapons, setCharacter }) {
                 ))}
               </select>
             </td>
-            <td>
+            <td data-label="Def">
               <input
                 type="text"
-                className="small-input"
+                className="small-input weapon-def-input"
+                id="weapon-def"
                 value={weapons[0]?.def || ''}
                 onChange={(e) => handleWeaponChange(0, 'def', e.target.value)}
                 placeholder="Def"
               />
             </td>
-            <td>
+            <td data-label="Move">
               <input
                 type="text"
-                className="small-input"
+                className="small-input weapon-move-input"
+                id="weapon-move"
                 value={weapons[0]?.move || ''}
                 onChange={(e) => handleWeaponChange(0, 'move', e.target.value)}
                 placeholder="Move"
               />
             </td>
-            <td>
+            <td data-label="Imagem">
               {weaponImages[0] && (
                 <img
                   src={weaponImages[0]}
@@ -147,6 +158,9 @@ function WeaponTable({ weapons, setCharacter }) {
               )}
             </td>
           </tr>
+        </tbody>
+        <tbody>
+          
         </tbody>
       </table>
     </div>

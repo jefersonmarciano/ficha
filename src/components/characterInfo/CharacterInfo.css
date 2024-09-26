@@ -204,6 +204,7 @@ select:focus {
 @media (max-width: 500px) {
     .character-info {
         flex-direction: column;
+        width: 90%;
     }
 
     .profile-section {
@@ -236,5 +237,16 @@ select:focus {
     .character-select,
     .player-name-input {
         width: 100%;
+    }
+    .character-name-level {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .level-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-direction: column;
     }
 }
