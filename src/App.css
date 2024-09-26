@@ -430,7 +430,7 @@ header h1 {
   margin-right: 5px; /* Espaçamento entre o ícone e o texto */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .top-section, .bottom-section, .right-container {
     flex-direction: column;
   }
