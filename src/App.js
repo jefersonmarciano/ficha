@@ -16,15 +16,36 @@ import MagicTablePopupCiclo2Fisico from './components/tabelas de magias/MagicTab
 import MagicTablePopupCiclo2Magico from './components/tabelas de magias/MagicTablePopupCiclo2Magico';
 import './App.css';
 import backpackImage from './bags.png';
-import { GiMagicBroom } from "react-icons/gi";
-import { GiMagicAxe } from "react-icons/gi";
-import { GiMagickTrick } from "react-icons/gi";
+import { GiMagicBroom, GiMagicAxe, GiMagickTrick } from "react-icons/gi";
 
 import magiasData from './data/magias.json';
 
+const initialSkills = {
+  'Atletismo': { roll: 0, trained: 0, others: 0 },
+  'Prestidigitação': { roll: 0, trained: 0, others: 0 },
+  'Luta/Briga': { roll: 0, trained: 0, others: 0 },
+  'Pontaria': { roll: 0, trained: 0, others: 0 },
+  'Magia (Cast)': { roll: 0, trained: 0, others: 0 },
+  'Reflexos': { roll: 0, trained: 0, others: 0 },
+  'Mana Sense': { roll: 0, trained: 0, others: 0 },
+  'Fortitude': { roll: 0, trained: 0, others: 0 },
+  'Vontade': { roll: 0, trained: 0, others: 0 },
+  'Sobrevivência': { roll: 0, trained: 0, others: 0 },
+  'Persuasão': { roll: 0, trained: 0, others: 0 },
+  'Diplomacia': { roll: 0, trained: 0, others: 0 },
+  'História': { roll: 0, trained: 0, others: 0 },
+  'Arcana': { roll: 0, trained: 0, others: 0 },
+  'Intuição': { roll: 0, trained: 0, others: 0 },
+  'Percepção': { roll: 0, trained: 0, others: 0 },
+  'Stealth': { roll: 0, trained: 0, others: 0 },
+  'Loot': { roll: 0, trained: 0, others: 0 },
+  'Medicina': { roll: 0, trained: 0, others: 0 },
+  'Concentração': { roll: 0, trained: 0, others: 0 }
+};
+
 function App() {
   const [character, setCharacter] = useState({
-    // ... (outros estados permanecem os mesmos)
+    // ... outros estados permanecem os mesmos
     additionalInfo: {
       ca: { base: 0, total: 0 },
       rd: { base: 0, total: 0 },
@@ -38,19 +59,19 @@ function App() {
     level: 1,
     profileImage: '',
     stats: {
-      agility: { base: 10, mod: 0 },
-      constitution: { base: 10, mod: 0 },
-      strength: { base: 10, mod: 0 },
-      intellect: { base: 10, mod: 0 },
-      wisdom: { base: 10, mod: 0 },
-      presence: { base: 10, mod: 0 },
+      agili: { base: 10, mod: 0 },
+      const: { base: 10, mod: 0 },
+      força: { base: 10, mod: 0 },
+      inteli: { base: 10, mod: 0 },
+      persp: { base: 10, mod: 0 },
+      prese: { base: 10, mod: 0 },
     },
     resources: {
-      health: { max: 100, current: 100 },
-      mana: { max: 100, current: 100 },
-      stamina: { max: 100, current: 100 },
+      Vida: { max: 100, current: 100 },
+      Mana: { max: 100, current: 100 },
+      Estam: { max: 100, current: 100 }
     },
-    skills: [], // Adicionado estado inicial para skills
+    skills: initialSkills,
     weapons: [
       { weaponType: '', name: '', attack: '', attackType: '' },
       { weaponType: '', name: '', attack: '', attackType: '' },

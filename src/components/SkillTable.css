@@ -3,54 +3,84 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .skill-table h2 {
+}
+
+.skill-table h2 {
     text-align: center;
     color: #5c4033;
     margin-bottom: 15px;
-  }
-  
-  .skill-table table {
+}
+
+.skill-table table {
     width: 100%;
     border-collapse: collapse;
-  }
-  
-  .skill-table th, .skill-table td {
+    table-layout: fixed; /* Garante que as colunas tenham larguras fixas */
+}
+
+.skill-table th, .skill-table td {
     padding: 8px;
     border: 1px solid #ddd;
-    text-align: left;
-  }
-  
-  .skill-table th {
+    text-align: center; /* Centraliza os textos */
+    vertical-align: middle; /* Alinhamento vertical consistente */
+    font-size: 14px;
+}
+
+.skill-table th {
     background-color: #f2f2f2;
     font-weight: bold;
-  }
-  
-  .skill-table .skill-input {
-    width: 60px; /* Ajuste a largura conforme necessário */
+}
+
+.skill-table .skill-input {
+    width: 80px; /* Aumentei um pouco para acomodar texto */
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    text-align: center;
-  }
-  
-  @media (max-width: 360px) {
+    text-align: center; /* Centraliza o texto dentro do input */
+    box-sizing: border-box; /* Garante que o padding e border sejam incluídos na largura total */
+    margin: 0; /* Remove margens que podem afetar o alinhamento */
+    height: 30px; /* Define uma altura consistente para todos os inputs */
+    line-height: 30px; /* Alinha verticalmente o texto */
+}
+
+.skill-table th:nth-child(2),
+.skill-table th:nth-child(4),
+.skill-table th:nth-child(5) {
+    text-align: center; /* Centraliza os cabeçalhos das colunas de score */
+}
+
+.skill-table td:nth-child(2),
+.skill-table td:nth-child(4),
+.skill-table td:nth-child(5) {
+    text-align: center; /* Centraliza os dados das colunas de score */
+    padding: 0; /* Remove padding para melhor alinhamento dos inputs */
+}
+
+.skill-table td:nth-child(2) .skill-input,
+.skill-table td:nth-child(4) .skill-input,
+.skill-table td:nth-child(5) .skill-input {
+    display: inline-block;
+    vertical-align: middle; /* Garante que os inputs estejam centralizados verticalmente */
+}
+
+/* Responsividade */
+@media (max-width: 360px) {
     .skill-table {
-      overflow-x: auto;
+        overflow-x: auto;
     }
 
     .skill-table table {
-      font-size: 12px;
+        font-size: 12px;
     }
 
-    .skill-input {
-      width: 30px;
+    .skill-table .skill-input {
+        width: 60px; /* Ajustado para telas menores */
+        height: 25px;
+        line-height: 25px;
     }
-  }
-  
-  @media (max-width: 750px) {
+}
+
+@media (max-width: 750px) {
     .skill-table {
-      overflow-x: auto;
+        overflow-x: auto;
     }
-  }
+}

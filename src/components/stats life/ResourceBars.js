@@ -21,9 +21,9 @@ function ResourceBars({ resources, setCharacter }) {
 
   const getBarColor = (resource) => {
     switch (resource) {
-      case 'health': return '#e74c3c';
-      case 'mana': return '#3498db';
-      case 'stamina': return '#f1c40f';
+      case 'Vida': return '#e74c3c';
+      case 'Mana': return '#3498db';
+      case 'Estam': return '#f1c40f';
       default: return '#95a5a6';
     }
   };

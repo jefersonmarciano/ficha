@@ -286,6 +286,8 @@ header h1 {
 .resource-bar h3 {
   color: #5c4033;
   margin-bottom: 5px;
+  min-width: 60px!important;
+  text-align: left;
 }
 
 .resource-inputs {

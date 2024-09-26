@@ -20,8 +20,8 @@ function Stats({ stats, setCharacter }) {
   };
 
   const statNames = [
-    'Agility', 'Constitution', 'Strength',
-    'Intellect', 'Wisdom', 'Presence'
+    'Agili', 'Const', 'Força',
+    'Inteli', 'Persp', 'Prese'
   ];
 
   return (

@@ -2,10 +2,26 @@ import React from 'react';
 import './SkillTable.css';
 
 const skills = [
-  'Atletismo', 'Prestidigitação', 'Luta/Briga', 'Pontaria', 'Magia (Cast)',
-  'Reflexos', 'Mana Sense', 'Fortitude', 'Vontade', 'Sobrevivência',
-  'Persuasão', 'Diplomacia', 'História', 'Arcana', 'Intuição',
-  'Percepção', 'Stealth', 'Loot', 'Medicina', 'Concentração'
+  { fullName: 'Atletismo' },
+  { fullName: 'Prestidigitação' },
+  { fullName: 'Luta/Briga' },
+  { fullName: 'Pontaria' },
+  { fullName: 'Magia (Cast)' },
+  { fullName: 'Reflexos' },
+  { fullName: 'Mana Sense' },
+  { fullName: 'Fortitude' },
+  { fullName: 'Vontade' },
+  { fullName: 'Sobrevivência' },
+  { fullName: 'Persuasão' },
+  { fullName: 'Diplomacia' },
+  { fullName: 'História' },
+  { fullName: 'Arcana' },
+  { fullName: 'Intuição' },
+  { fullName: 'Percepção' },
+  { fullName: 'Stealth' },
+  { fullName: 'Loot' },
+  { fullName: 'Medicina' },
+  { fullName: 'Concentração' }
 ];
 
 const attributes = [
@@ -14,14 +30,14 @@ const attributes = [
 ];
 
 function SkillTable({ character, setCharacter }) {
-  const handleSkillChange = (skill, field, value) => {
+  const handleSkillChange = (skillName, field, value) => {
     setCharacter(prev => ({
       ...prev,
       skills: {
         ...prev.skills,
-        [skill]: {
-          ...prev.skills[skill],
-          [field]: field === 'roll' ? parseInt(value) || 0 : value
+        [skillName]: {
+          ...prev.skills[skillName],
+          [field]: field === 'roll' ? value : parseInt(value) || 0
         }
       }
     }));
@@ -42,14 +58,14 @@ function SkillTable({ character, setCharacter }) {
         </thead>
         <tbody>
           {skills.map((skill, index) => (
-            <tr key={skill}>
-              <td>{skill}</td>
+            <tr key={skill.fullName}>
+              <td>{skill.fullName}</td>
               <td>
                 <input
-                  type="number"
+                  type="text"
                   className="skill-input"
-                  value={character.skills[skill]?.roll || 0}
-                  onChange={(e) => handleSkillChange(skill, 'roll', e.target.value)}
+                  value={character.skills[skill.fullName]?.roll || ''}
+                  onChange={(e) => handleSkillChange(skill.fullName, 'roll', e.target.value)}
                 />
               </td>
               <td>
@@ -59,16 +75,16 @@ function SkillTable({ character, setCharacter }) {
                 <input
                   type="number"
                   className="skill-input"
-                  value={character.skills[skill]?.trained || 0}
-                  onChange={(e) => handleSkillChange(skill, 'trained', e.target.value)}
+                  value={character.skills[skill.fullName]?.trained || 0}
+                  onChange={(e) => handleSkillChange(skill.fullName, 'trained', e.target.value)}
                 />
               </td>
               <td>
                 <input
                   type="number"
                   className="skill-input"
-                  value={character.skills[skill]?.others || 0}
-                  onChange={(e) => handleSkillChange(skill, 'others', e.target.value)}
+                  value={character.skills[skill.fullName]?.others || 0}
+                  onChange={(e) => handleSkillChange(skill.fullName, 'others', e.target.value)}
                 />
               </td>
             </tr>

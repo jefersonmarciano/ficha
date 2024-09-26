@@ -135,7 +135,6 @@
     border-color: #007bff;
 }
 
-@media (max-width: 360px) {
   .backpack-popup {
     width: 90%;
     padding: 10px;
@@ -156,7 +155,13 @@
   .money-section {
     flex-direction: column;
   }
-}
+  @media  (max-width: 1000px) {
+    .backpack-popup {
+      width: 90%;
+      padding: 10px;
+    }  
+  
+  }
 
 @media (max-width: 750px) {
   .table-container {
