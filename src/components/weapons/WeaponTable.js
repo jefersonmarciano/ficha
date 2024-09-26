@@ -66,7 +66,7 @@ function WeaponTable({ weapons, setCharacter }) {
         </thead>
         <tbody>
           <tr>
-            <td data-label="Tipo de Arma">
+            <td data-label="Arma">
               <select
                 className="weapon-type-select"
                 id="weapon-type"
@@ -102,7 +102,7 @@ function WeaponTable({ weapons, setCharacter }) {
                 placeholder="Ataque"
               />
             </td>
-            <td data-label="Tipo de Ataque">
+            <td data-label="Ataque">
               <select
                 className="attack-type-select"
                 id="weapon-attack-type"
