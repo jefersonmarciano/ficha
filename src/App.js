@@ -17,7 +17,8 @@ import MagicTablePopupCiclo2Magico from './components/tabelas de magias/MagicTab
 import DiceRoller from './components/diceRoller/DiceRoller';
 import './App.css';
 import backpackImage from './bags.png';
-import { GiMagicBroom, GiMagicAxe, GiMagickTrick } from "react-icons/gi";
+import { GiMagicBroom, GiMagicAxe, GiMagickTrick, GiSave, GiLoad } from "react-icons/gi";
+
 import { saveAs } from 'file-saver';
 
 import magiasData from './data/magias.json';
@@ -256,8 +257,12 @@ function App() {
         )}
         
         <div className="export-import-buttons" id='export-import-buttons'>
-          <button onClick={exportData} className="export-button">Exportar Dados</button>
+          <button onClick={exportData} className="export-button">
+            <GiSave className="export-icon" />
+            Exportar Dados
+            </button>
           <label htmlFor="import-input" className="import-button">
+          <GiLoad className="button-icon" />
             Importar Dados
             <input
               id="import-input"
