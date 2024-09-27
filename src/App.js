@@ -18,6 +18,7 @@ import DiceRoller from './components/diceRoller/DiceRoller';
 import './App.css';
 import backpackImage from './bags.png';
 import { GiMagicBroom, GiMagicAxe, GiMagickTrick } from "react-icons/gi";
+import { saveAs } from 'file-saver';
 
 import magiasData from './data/magias.json';
 
@@ -84,6 +85,7 @@ function App() {
       { name: '', quantity: 0, description: '' },
     ],
     money: { gold: 0, silver: 0, bronze: 0 },
+    selectedMagicSkills: [],
   });
 
   const [showBackpack, setShowBackpack] = useState(false);
@@ -107,16 +109,43 @@ function App() {
   }, [character]);
 
   const handleSelectMagic = (magia) => {
-    setSelectedSkills((prevSkills) => {
-      // Verifica se a magia já está selecionada
+    setCharacter((prevCharacter) => {
+      const prevSkills = prevCharacter.selectedMagicSkills;
+      let newSkills;
       if (prevSkills.some((skill) => skill.magia === magia.magia)) {
-        // Se já estiver selecionada, remove-a
-        return prevSkills.filter((skill) => skill.magia !== magia.magia);
+        newSkills = prevSkills.filter((skill) => skill.magia !== magia.magia);
       } else {
-        // Se não estiver selecionada, adiciona-a
-        return [...prevSkills, magia];
+        newSkills = [...prevSkills, magia];
       }
+      return {
+        ...prevCharacter,
+        selectedMagicSkills: newSkills,
+      };
     });
+  };
+
+  const exportData = () => {
+    const dataStr = JSON.stringify(character);
+    const blob = new Blob([dataStr], {type: "application/json"});
+    saveAs(blob, "character-data.json");
+  };
+
+  const importData = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const importedCharacter = JSON.parse(e.target.result);
+          setCharacter(importedCharacter);
+          localStorage.setItem('character', JSON.stringify(importedCharacter));
+          alert('Dados importados com sucesso!');
+        } catch (error) {
+          alert('Erro ao importar os dados. Verifique se o arquivo é válido.');
+        }
+      };
+      reader.readAsText(file);
+    }
   };
 
   return (
@@ -190,7 +219,7 @@ function App() {
             magias={magiasData.ciclo1.fisico}
             onClose={() => setShowMagicTablePopupCiclo1Fisico(false)}
             onSelect={handleSelectMagic}
-            selectedSkills={selectedSkills} // Passa as magias selecionadas
+            selectedSkills={character.selectedMagicSkills}
           />
         )}
         {showMagicTablePopupCiclo1Magico && (
@@ -198,15 +227,15 @@ function App() {
             magias={magiasData.ciclo1.magico}
             onClose={() => setShowMagicTablePopupCiclo1Magico(false)}
             onSelect={handleSelectMagic}
-            selectedSkills={selectedSkills} // Passa as magias selecionadas
+            selectedSkills={character.selectedMagicSkills}
           />
         )}
         {showMagicTablePopupCiclo2Fisico && (
           <MagicTablePopupCiclo2Fisico
-            magias={magiasData.ciclo2.fisico} // Corrigido para acessar diretamente o array
+            magias={magiasData.ciclo2.fisico}
             onClose={() => setShowMagicTablePopupCiclo2Fisico(false)}
             onSelect={handleSelectMagic}
-            selectedSkills={selectedSkills} // Passa as magias selecionadas
+            selectedSkills={character.selectedMagicSkills}
           />
         )}
         {showMagicTablePopupCiclo2Magico && (
@@ -214,16 +243,31 @@ function App() {
             magias={magiasData.ciclo2.magico}
             onClose={() => setShowMagicTablePopupCiclo2Magico(false)}
             onSelect={handleSelectMagic}
-            selectedSkills={selectedSkills} // Passa as magias selecionadas
+            selectedSkills={character.selectedMagicSkills}
           />
         )}
         
         {showMagicPopup && (
           <MagicPopup
-            skills={selectedSkills}
+            skills={character.selectedMagicSkills}
             onClose={() => setShowMagicPopup(false)}
+            setCharacter={setCharacter}
           />
         )}
+        
+        <div className="export-import-buttons" id='export-import-buttons'>
+          <button onClick={exportData} className="export-button">Exportar Dados</button>
+          <label htmlFor="import-input" className="import-button">
+            Importar Dados
+            <input
+              id="import-input"
+              type="file"
+              accept=".json"
+              onChange={importData}
+              style={{ display: 'none' }}
+            />
+          </label>
+        </div>
       </div>
       
     </div>
