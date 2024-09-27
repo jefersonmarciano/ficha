@@ -262,7 +262,7 @@ function App() {
             Exportar Dados
             </button>
           <label htmlFor="import-input" className="import-button">
-          <GiLoad className="button-icon" />
+            <GiLoad className="button-icon" />
             Importar Dados
             <input
               id="import-input"
