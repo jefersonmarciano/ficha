@@ -9,7 +9,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    overflow-y: auto;
+    
   }
   
   .magic-table-popup {
@@ -77,9 +77,8 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    overflow-y: auto;
   }
-  
+
   .magic-table-popup,
   .magic-popup {
     background: #2c3e50;
@@ -88,11 +87,22 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 600px;
-    max-height: 90vh;
-    overflow-y: auto;
     position: relative;
   }
-  
+
+  @media (max-width: 800px) {
+    .magic-table-popup-overlay,
+    .magic-popup-overlay {
+      overflow-y: auto;
+    }
+
+    .magic-table-popup,
+    .magic-popup {
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  }
+
   @media (max-width: 480px) {
     .magic-table-popup,
     .magic-popup {
@@ -105,3 +115,4 @@
       right: 5px;
     }
   }
+  
