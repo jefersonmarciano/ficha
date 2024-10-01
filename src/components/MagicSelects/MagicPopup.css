@@ -17,7 +17,7 @@
     border-radius: 15px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); 
     width: 80%;
-    max-width: 600px; 
+    max-width: 90%; 
     text-align: center;
     color: #ecf0f1; 
     position: relative; 
@@ -64,4 +64,45 @@
   
   .magic-popup li strong {
     color: #1abc9c;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .usar-skill-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .usar-skill-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .mana-button {
+    background-color: #3498db;
+    color: white;
+  }
+
+  .mana-button:hover {
+    background-color: #2980b9;
+  }
+
+  .stamina-button {
+    background-color: #f1c40f;
+    color: #34495e;
+  }
+
+  .stamina-button:hover {
+    background-color: #f39c12;
   }

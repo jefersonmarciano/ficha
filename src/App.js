@@ -70,9 +70,9 @@ function App() {
       prese: { base: 10, mod: 0 },
     },
     resources: {
-      Vida: { max: 100, current: 100 },
-      Mana: { max: 100, current: 100 },
-      Estam: { max: 100, current: 100 }
+      Vida: { max: 30, current: 0 },
+      Mana: { max: 10, current: 10 },
+      Estam: { max: 10, current: 100 }
     },
     skills: initialSkills,
     weapons: [

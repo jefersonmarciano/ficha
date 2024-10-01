@@ -70,6 +70,24 @@ function ResourceBars({ resources, setCharacter }) {
           </div>
         </div>
       ))}
+      <div className="reset-button-container">
+        <button
+          className="reset-button"
+          onClick={() => {
+            setCharacter(prevState => ({
+              ...prevState,
+              resources: Object.fromEntries(
+                Object.entries(prevState.resources).map(([key, value]) => [
+                  key,
+                  { ...value, current: value.max }
+                ])
+              )
+            }));
+          }}
+        >
+          Resetar Recursos
+        </button>
+      </div>
     </div>
   );
 }
