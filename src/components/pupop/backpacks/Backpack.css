@@ -37,8 +37,12 @@
 
 .backpack-popup h3 {
     margin: 0;
+    color: aliceblue;
    
 }
+.backpack-popup h4{
+  color: aliceblue;
+} 
 
 .backpack-popup .table-container {
     max-height: 300px;
@@ -71,6 +75,7 @@
 .backpack-popup .money-section label {
     display: block;
     margin-bottom: 10px;
+    color: aliceblue;
 }
 
 

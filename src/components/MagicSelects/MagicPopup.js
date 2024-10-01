@@ -27,8 +27,8 @@ const MagicPopup = ({ skills, onClose, setCharacter }) => {
   };
 
   return (
-    <div className="magic-popup-overlay">
-      <div className="magic-popup">
+    <div className="magic-table-popup-overlay">
+      <div className="magic-table-popup">
         <button className="close-button" onClick={onClose}>X</button>
         <h2>Magias Selecionadas</h2>
         <ul>
